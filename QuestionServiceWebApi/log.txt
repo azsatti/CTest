@@ -1,0 +1,16 @@
+2018-04-26 17:02:13,665 [5] ERROR Unhandled exception processing GET for http://localhost:50014/swagger.
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at QuestionServiceWebApi.Utility.ApiKeyHandler.<SendAsync>d__0.MoveNext() in C:\Aftab\CodeAZ\CandidateTest-master\CandidateTest-master\QuestionServiceWebApi\Utility\ApiKeyHandler.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.HttpServer.<SendAsync>d__24.MoveNext()
+2018-04-26 17:05:24,099 [6] ERROR Unhandled exception processing GET for http://localhost:50014/api/questions.
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at QuestionServiceWebApi.Utility.ApiKeyHandler.<SendAsync>d__0.MoveNext() in C:\Aftab\CodeAZ\CandidateTest-master\CandidateTest-master\QuestionServiceWebApi\Utility\ApiKeyHandler.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.HttpServer.<SendAsync>d__24.MoveNext()
