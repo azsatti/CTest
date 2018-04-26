@@ -20,7 +20,7 @@ namespace QuestionServiceWebApi.Utility
         /// <returns></returns>
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            if (!request.RequestUri.AbsolutePath.Contains("swagger"))
+            if (!request.RequestUri.AbsolutePath.Contains("swagger") && request.RequestUri.PathAndQuery != "/")
             {
                 var apiKey = request.Headers.GetValues(Constants.HeaderKey).FirstOrDefault();
 
