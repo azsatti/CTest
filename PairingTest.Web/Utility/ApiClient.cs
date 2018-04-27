@@ -2,15 +2,16 @@
 using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using PairingTest.Web.Interfaces;
 
 namespace PairingTest.Web.Utility
 {
-    public class ApiClient
+    public class ApiClient : IApiClient
     {
         static HttpClient _client;
-        public ApiClient()
+        public ApiClient(IApiSettings settings)
         {
-            var apiUrl = ConfigurationManager.AppSettings["QuestionnaireServiceUri"];
+            var apiUrl = settings.ApiUrl;
 
             _client = new HttpClient
             {
@@ -22,8 +23,7 @@ namespace PairingTest.Web.Utility
             _client.DefaultRequestHeaders.Add("HeaderKey",
                 "Anyvalue");
         }
-
-
-        public HttpClient Instance => _client;
+        
+        public HttpClient Get => _client;
     }
 }
