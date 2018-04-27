@@ -11,7 +11,7 @@ namespace PairingTest.Unit.Tests.Web
         public void ShouldGetQuestions()
         {
             //Arrange
-            var expectedTitle = "My expected quesitons";
+            var expectedTitle = "Geography Questions";
             var questionnaireController = new QuestionnaireController();
 
             //Act
