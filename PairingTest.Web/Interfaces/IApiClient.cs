@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 
-namespace PairingTest.Web
+namespace PairingTest.Web.Utility
 {
     public interface IApiClient
     {

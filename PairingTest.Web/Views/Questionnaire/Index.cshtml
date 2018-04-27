@@ -1,25 +1,15 @@
 ﻿@model PairingTest.Web.Models.QuestionnaireViewModel
 
 <html>
-    <head>
-        <title>@Model.QuestionnaireTitle</title>
-    </head>
+<head>
+    <title>@Model.QuestionnaireTitle</title>
+</head>
 <body>
-   @using (Html.BeginForm("Add", "Questionnaire", FormMethod.Post))
+    <h2>Index page</h2>
+    @foreach (var question in Model.QuestionsText)
     {
-        <h2>Index</h2>
-
-        int i = 0;
-        foreach (var question in Model.QuestionsText)
-        {
-            <div>
-               @Html.Label(question)
-                @Html.TextBox("question-answer" + i)
-            </div>
-            i++;
-        }
+        <div>@Html.Label(question)</div>
         <br/>
-        <input type="submit" value="submit"/>
     }
 </body>
 </html>
