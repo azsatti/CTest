@@ -24,11 +24,10 @@ namespace PairingTest.Web.Controllers
 
         public async Task<ViewResult> Index()
         {
-           
             HttpResponseMessage responseMessage = await _httpClient.GetAsync("api/questions");
             if (responseMessage.IsSuccessStatusCode)
             {
-                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var responseData = await responseMessage.Content.ReadAsStringAsync();
 
                 var questions = JsonConvert.DeserializeObject<QuestionnaireViewModel>(responseData);
 
