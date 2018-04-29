@@ -17,6 +17,7 @@ namespace QuestionServiceWebApi
             // e.g. container.RegisterType<ITestService, TestService>();
 
             container.RegisterType<IQuestionRepository, QuestionRepository>();
+            container.RegisterType<IQuestionsProvider, QuestionProvider>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

@@ -209,9 +209,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IQuestionRepository.cs" />
+    <Compile Include="Interfaces\IQuestionsProvider.cs" />
     <Compile Include="List\QuestionnaireList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Questionnaire.cs" />
+    <Compile Include="QuestionProvider.cs" />
     <Compile Include="QuestionRepository.cs" />
     <Compile Include="Utility\ApiKeyHandler.cs" />
     <Compile Include="Utility\Constants.cs" />
