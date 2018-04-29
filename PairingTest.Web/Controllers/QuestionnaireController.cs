@@ -9,22 +9,21 @@ namespace PairingTest.Web.Controllers
 {
     public class QuestionnaireController : Controller
     {
-        private readonly HttpClient _httpClient;
+        private readonly IApiClient _apiClient;
 
-        public QuestionnaireController() : this (null)
-        {
-        }
+        //public QuestionnaireController() : this(null)
+        //{
+            
+        //}
 
         public QuestionnaireController(IApiClient apiClient = null)
         {
-            var apiClient1 = apiClient ?? new ApiClient(new ApiSettings());
-
-            _httpClient = apiClient1.Get;
+            _apiClient = apiClient ?? new ApiClient(new ApiSettings());
         }
 
         public async Task<ViewResult> Index()
         {
-            HttpResponseMessage responseMessage = await _httpClient.GetAsync("api/questions");
+            HttpResponseMessage responseMessage = await _apiClient.GetAsync("api/questions");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = await responseMessage.Content.ReadAsStringAsync();
