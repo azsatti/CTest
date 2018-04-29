@@ -10,11 +10,7 @@ namespace QuestionServiceWebApi.Controllers
         public QuestionsController(IQuestionRepository questionRepository)
         {
             _questionRepository = questionRepository;
-        }
-
-        //public QuestionsController() : this(new QuestionRepository())
-        //{
-        //}
+        }        
 
         // GET api/questions
         /// <summary>

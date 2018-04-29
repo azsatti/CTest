@@ -10,12 +10,7 @@ namespace PairingTest.Web.Controllers
     public class QuestionnaireController : Controller
     {
         private readonly IApiClient _apiClient;
-
-        //public QuestionnaireController() : this(null)
-        //{
-            
-        //}
-
+                
         public QuestionnaireController(IApiClient apiClient = null)
         {
             _apiClient = apiClient ?? new ApiClient(new ApiSettings());
