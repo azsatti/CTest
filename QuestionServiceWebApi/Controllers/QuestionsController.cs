@@ -12,9 +12,9 @@ namespace QuestionServiceWebApi.Controllers
             _questionRepository = questionRepository;
         }
 
-        public QuestionsController() : this(new QuestionRepository())
-        {
-        }
+        //public QuestionsController() : this(new QuestionRepository())
+        //{
+        //}
 
         // GET api/questions
         /// <summary>

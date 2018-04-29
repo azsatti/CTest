@@ -9,12 +9,12 @@ namespace QuestionServiceWebApi
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            UnityConfig.RegisterComponents();
             log4net.Config.XmlConfigurator.Configure();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);            
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
         }
     }
