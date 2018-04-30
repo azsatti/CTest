@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionServiceWebApi\NotImplementedExceptionFilterTest.cs" />
     <Compile Include="QuestionServiceWebApi\QuestionRepositoryTests.cs" />
     <Compile Include="QuestionServiceWebApi\QuestionsControllerTests.cs" />
     <Compile Include="QuestionServiceWebApi\Stubs\FakeQuestionRepository.cs" />
@@ -121,7 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PairingTest.Web\PairingTest.Web.csproj">
@@ -133,7 +136,9 @@
       <Name>QuestionServiceWebApi</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

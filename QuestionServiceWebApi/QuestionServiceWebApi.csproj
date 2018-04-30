@@ -219,6 +219,7 @@
     <Compile Include="Utility\Constants.cs" />
     <Compile Include="Utility\GlobalExceptionHandler.cs" />
     <Compile Include="Utility\GlobalExceptionLogger.cs" />
+    <Compile Include="Utility\NotImplementedExceptionFilterAttribute.cs" />
     <Compile Include="Utility\ServerError.cs" />
   </ItemGroup>
   <ItemGroup>

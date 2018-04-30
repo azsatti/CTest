@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using QuestionServiceWebApi;
+using QuestionServiceWebApi.Interfaces;
 
 namespace PairingTest.Unit.Tests.QuestionServiceWebApi
 {
@@ -9,7 +11,8 @@ namespace PairingTest.Unit.Tests.QuestionServiceWebApi
         [Test]
         public void ShouldGetExpectedQuestionnaire()
         {
-            var questionRepository = new QuestionRepository();
+            var mocked = new Mock<IQuestionsProvider>();
+            var questionRepository = new QuestionRepository(mocked.Object);
 
             var questionnaire = questionRepository.GetQuestionnaire();
 
