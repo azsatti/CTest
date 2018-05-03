@@ -29,6 +29,10 @@ namespace QuestionServiceWebApi
             // Message handler
             config.MessageHandlers.Add(new ApiKeyHandler());
 
+            // filters
+
+            config.Filters.Add(new NotImplementedExceptionFilterAttribute());
+
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
         }

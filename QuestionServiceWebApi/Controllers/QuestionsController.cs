@@ -1,5 +1,7 @@
 ﻿using System.Web.Http;
 using QuestionServiceWebApi.Interfaces;
+using System;
+using QuestionServiceWebApi.Utility;
 
 namespace QuestionServiceWebApi.Controllers
 {
@@ -10,11 +12,7 @@ namespace QuestionServiceWebApi.Controllers
         public QuestionsController(IQuestionRepository questionRepository)
         {
             _questionRepository = questionRepository;
-        }
-
-        public QuestionsController() : this(new QuestionRepository())
-        {
-        }
+        }        
 
         // GET api/questions
         /// <summary>
@@ -36,8 +34,10 @@ namespace QuestionServiceWebApi.Controllers
         }
 
         // POST api/questions
+        [NotImplementedExceptionFilter]
         public void Post([FromBody]string value)
         {
+            throw new NotImplementedException("This method is not implemented");
         }
 
         // PUT api/questions/5

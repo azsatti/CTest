@@ -5,19 +5,19 @@ namespace QuestionServiceWebApi
 {
     public class QuestionRepository : IQuestionRepository
     {
+        private readonly IQuestionsProvider _questionProvider; 
+        public QuestionRepository(IQuestionsProvider questionProvider)
+        {
+            _questionProvider = questionProvider;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Questionnaire GetQuestionnaire()
         {
-            return new Questionnaire
-            {
-                QuestionnaireTitle = "Geography Questions",
-                QuestionsText = new List<string>
-                                           {
-                                               "What is the capital of Cuba?",
-                                               "What is the capital of France?",
-                                               "What is the capital of Poland?",
-                                               "What is the capital of Germany?"
-                                           }
-            };
+            return _questionProvider.GetQuestionnaire();
         }
     }
 }
